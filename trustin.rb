@@ -57,7 +57,7 @@ class TrustIn
   end
 
   def calculate_durability(current_durability, point, state)
-    return if state == "unfavorable"
+    return current_durability if state == "unfavorable"
     max(current_durability + point, 0)
   end
 end
